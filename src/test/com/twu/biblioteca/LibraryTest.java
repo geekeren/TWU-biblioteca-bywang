@@ -3,7 +3,12 @@ package com.twu.biblioteca;
 import com.twu.biblioteca.Library;
 import org.junit.Test;
 import org.junit.Before; 
-import org.junit.After; 
+import org.junit.After;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+import static org.junit.Assert.assertEquals;
 
 /** 
 * Library Tester. 
@@ -31,7 +36,9 @@ public void after() throws Exception {
 */ 
 @Test
 public void testAddBook() throws Exception {
-    library.addBook(new Book("Java",2014));
+    Book book = new Book("Java",2014);
+    library.addBook(book);
+    assertEquals(library.books, Arrays.asList(book));
 //TODO: Test goes here... 
 } 
 
