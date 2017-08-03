@@ -9,4 +9,8 @@ public class Book {
         this.name = name;
         this.yearPublished = yearPublished;
     }
+
+//    public String getName(){
+//        return
+//    };
 }

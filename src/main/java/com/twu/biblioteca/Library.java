@@ -5,7 +5,8 @@ import java.util.List;
 
 public class Library {
 
-    List<Book> books =new ArrayList<>();
+    List<Book> booksStoredInLib =new ArrayList<>();
+    List<Book> booksCheckedOut =new ArrayList<>();
 
 
     public Library() {
@@ -13,6 +14,15 @@ public class Library {
     }
 
     public void addBook(Book book) {
-        books.add(book);
+        booksStoredInLib.add(book);
+    }
+
+    public boolean checkedOutBookByName(String name){
+
+        return false;
+    }
+
+    public boolean returnBookByName(String name){
+        return false;
     }
 }

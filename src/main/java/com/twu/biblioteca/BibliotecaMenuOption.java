@@ -2,7 +2,7 @@ package com.twu.biblioteca;
 
 public abstract class BibliotecaMenuOption {
     public String name;
-    private Library library;
+    public Library library;
     public BibliotecaMenuOption(Library library) {
         this.library = library;
     }
