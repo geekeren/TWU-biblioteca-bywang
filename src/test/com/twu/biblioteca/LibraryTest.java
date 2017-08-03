@@ -25,7 +25,8 @@ public class LibraryTest extends BibliotecaTest{
 @Before
 public void before() throws Exception {
     library = new Library();
-
+    Book book = new Book("Java","John",2014);
+    library.addBook(book);
 }
 
 @After
@@ -39,7 +40,7 @@ public void after() throws Exception {
 */
     @Test
     public void testAddBook() throws Exception {
-        Book book = new Book("Java",2014);
+        Book book = new Book("C++","Tom",2014);
         library.addBook(book);
         assertEquals(library.booksStoredInLib, Arrays.asList(book));
     //TODO: Test goes here...
@@ -47,7 +48,7 @@ public void after() throws Exception {
 
     @Test
     public void testRemoveBook() throws Exception {
-        Book book = new Book("Java",2014);
+        Book book = new Book("Java","wby",2014);
         library.addBook(book);
         assertEquals(library.booksStoredInLib, Arrays.asList(book));
 //TODO: Test goes here...
@@ -56,14 +57,14 @@ public void after() throws Exception {
     @Test
     public void shouldCheckoutBookSuccessfulIfValidBook(){
 
-
+        assertEquals(true,library.checkedOutBookByName("Java"));
 
     }
 
     @Test
     public void shouldCheckoutBookFailedIfNoThisBook(){
 
-
+        assertEquals(false,library.checkedOutBookByName("Ruby"));
     }
 
 

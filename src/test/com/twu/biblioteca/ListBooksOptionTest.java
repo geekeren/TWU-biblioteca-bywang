@@ -22,6 +22,7 @@ public class ListBooksOptionTest extends BibliotecaTest{
 public void before() throws Exception {
     Library library = new Library();
     library.booksStoredInLib.add(new Book("Java",2011));
+    library.booksStoredInLib.add(new Book("Ruby",2011));
 //    library.booksStoredInLib.add(new Book("cpp",2011));
     listBooksOption = new ListBooksOption(library);
 } 
@@ -39,7 +40,7 @@ public void after() throws Exception {
 public void testExec() throws Exception {
     listBooksOption.exec();
     //String s = new String("Hello World! Hello Java!\n");    // 注意：控制台的换行，这里用 '\n' 表示
-    assertEquals("[1]Java\n", getConsoleOutput());
+    assertEquals("[1]Java\n[2]Ruby\n", getConsoleOutput());
 } 
 
 

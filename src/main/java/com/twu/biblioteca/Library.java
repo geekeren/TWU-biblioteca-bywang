@@ -19,6 +19,13 @@ public class Library {
 
     public boolean checkedOutBookByName(String name){
 
+        for(int i=0;i<booksStoredInLib.size();i++){
+            if(booksStoredInLib.get(i).name.equals(name)){
+                booksCheckedOut.add(booksStoredInLib.get(i));
+                booksStoredInLib.remove(i);
+                return true;
+            }
+        }
         return false;
     }
 
