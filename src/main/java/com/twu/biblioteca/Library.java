@@ -6,14 +6,7 @@ import java.util.List;
 
 public class Library {
 
-    List<Book> booksStoredInLib = new ArrayList<>(
-            Arrays.asList(
-                    new Book("PHP Basic","WBY",2014),
-                    new Book("Java Web","JonhY",2014),
-                    new Book("CPP","Wang",2014),
-                    new Book("DSS","WBY",2016)
-            )
-    );
+    List<Book> booksStoredInLib = new ArrayList<>();
     List<Book> booksCheckedOut = new ArrayList<>();
 
 
@@ -45,5 +38,9 @@ public class Library {
             }
 
         }
+    }
+
+    public void addBook(Book book) {
+        booksStoredInLib.add(book);
     }
 }
