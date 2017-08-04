@@ -33,7 +33,7 @@ public void after() throws Exception {
 */ 
 @Test
 public void shouldListOptionCorrectly() throws Exception {
-    assertEquals("Welcome to Biblioteca!\n" +
+    assertEquals(
             "Please select an option :\n" +
             "\t[1]: List books\n" +
             "\t[2]: Check out Book\n" +

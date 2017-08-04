@@ -40,9 +40,9 @@ public class BibliotecaApp {
 
     public  String getOptionList() {
 
-        StringBuffer sb = new StringBuffer("Please select an option :");
+        StringBuffer sb = new StringBuffer("Please select an option :\n");
         for(int i =1 ;i<=options.size();i++){
-            sb.append("\t["+i+"]: "+options.get(i-1).name);
+            sb.append("\t["+i+"]: "+options.get(i-1).name+"\n");
         }
         return sb.toString();
     }
