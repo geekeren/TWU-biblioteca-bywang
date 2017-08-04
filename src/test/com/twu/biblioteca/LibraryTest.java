@@ -20,7 +20,7 @@ import static org.junit.Assert.assertEquals;
 * @since <pre>Aug 3, 2017</pre>
 * @version 1.0
 */
-public class LibraryTest extends BibliotecaTest{
+public class LibraryTest {
     private Library library;
 
 @Before
