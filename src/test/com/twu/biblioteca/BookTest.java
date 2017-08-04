@@ -31,7 +31,7 @@ public void after() throws Exception {
 @Test
 public void shouldGetBookDetailsMsg() throws Exception{
 
-    assertEquals("<<JAVA>> Wangbaiyuan @2017 ",book.getDetails());
+    assertEquals("<<JAVA>> Wangbaiyuan @2017",book.getDetails());
     }
 
 } 

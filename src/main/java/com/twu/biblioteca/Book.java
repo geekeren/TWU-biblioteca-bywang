@@ -11,7 +11,8 @@ public class Book {
         this.yearPublished = yearPublished;
     }
 
-//    public String getName(){
-//        return
-//    };
+    public String getDetails() {
+        return String.format("<<%s>> %s @%d",name,author,yearPublished);
+    }
+
 }
