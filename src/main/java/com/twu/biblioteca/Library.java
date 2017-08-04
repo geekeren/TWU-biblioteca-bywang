@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Library {
 
-    List<Book> booksStoredInLib =new ArrayList<>();
-    List<Book> booksCheckedOut =new ArrayList<>();
+    List<Book> booksStoredInLib = new ArrayList<>();
+    List<Book> booksCheckedOut = new ArrayList<>();
 
 
     public Library() {
@@ -14,10 +14,10 @@ public class Library {
     }
 
 
-    public boolean checkedOutBookByName(String name){
+    public boolean checkedOutBookByName(String name) {
 
-        for(int i=0;i<booksStoredInLib.size();i++){
-            if(booksStoredInLib.get(i).name.equals(name)){
+        for (int i = 0; i < booksStoredInLib.size(); i++) {
+            if (booksStoredInLib.get(i).name.equals(name)) {
                 booksCheckedOut.add(booksStoredInLib.get(i));
                 booksStoredInLib.remove(i);
                 return true;
@@ -26,15 +26,15 @@ public class Library {
         return false;
     }
 
-    public boolean returnBookByName(String name) {
-        for (int i = 0; i < booksStoredInLib.size(); i++) {
-            if (booksStoredInLib.get(i).name.equals(name)) {
-                booksCheckedOut.add(booksStoredInLib.get(i));
-                booksStoredInLib.remove(i);
-                return true;
+    public void returnBookByName(String name) {
+
+        for (int i = 0; i < booksCheckedOut.size(); i++) {
+            if (booksCheckedOut.get(i).name.equals(name)) {
+                booksStoredInLib.add(booksCheckedOut.get(i));
+                booksCheckedOut.remove(i);
+
             }
 
         }
-        return false;
     }
 }

@@ -50,6 +50,7 @@ public void after() throws Exception {
 
     @Test
     public void shouldBookAppearInLibAfterReturn(){
+        library.booksCheckedOut.add(new Book("Ruby","John",2014));
         library.returnBookByName("Ruby");
 
         boolean isBookAppearInLib = false;
