@@ -13,9 +13,6 @@ public class Library {
 
     }
 
-    public void addBook(Book book) {
-        booksStoredInLib.add(book);
-    }
 
     public boolean checkedOutBookByName(String name){
 
@@ -29,7 +26,15 @@ public class Library {
         return false;
     }
 
-    public boolean returnBookByName(String name){
+    public boolean returnBookByName(String name) {
+        for (int i = 0; i < booksStoredInLib.size(); i++) {
+            if (booksStoredInLib.get(i).name.equals(name)) {
+                booksCheckedOut.add(booksStoredInLib.get(i));
+                booksStoredInLib.remove(i);
+                return true;
+            }
+
+        }
         return false;
     }
 }

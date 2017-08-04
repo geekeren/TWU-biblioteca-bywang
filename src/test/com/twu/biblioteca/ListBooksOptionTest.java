@@ -21,8 +21,8 @@ public class ListBooksOptionTest extends BibliotecaTest{
     @Before
 public void before() throws Exception {
     Library library = new Library();
-    library.booksStoredInLib.add(new Book("Java",2011));
-    library.booksStoredInLib.add(new Book("Ruby",2011));
+    library.booksStoredInLib.add(new Book("Java","Hbj",2011));
+    library.booksStoredInLib.add(new Book("Ruby","Hf",2011));
 //    library.booksStoredInLib.add(new Book("cpp",2011));
     listBooksOption = new ListBooksOption(library);
 } 
