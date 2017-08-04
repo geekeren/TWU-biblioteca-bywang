@@ -1,0 +1,2 @@
+- BibliotecaApp.main()启动系统
+- 本项目基于以下共识：为了避免业务逻辑复杂程度扩大，使用Book的name作为Book的唯一ID
