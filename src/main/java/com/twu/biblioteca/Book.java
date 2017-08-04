@@ -12,7 +12,7 @@ public class Book {
     }
 
     public String getDetails() {
-        return String.format("<<%s>> %s @%d",name,author,yearPublished);
+        return String.format("《%s》 Author：%s ；Year：%d", name, author, yearPublished);
     }
 
 }

@@ -35,7 +35,8 @@ public void after() throws Exception {
     @Test
     public void shouldReturnListBooks() throws Exception {
 
-    assertEquals("[1]Java\n[2]Ruby\n", listBooksOption.getOutputOfListBooks());
+        assertEquals("[1]《Java》 Author：Hbj ；Year：2011\n" +
+                "[2]《Ruby》 Author：Hf ；Year：2011\n", listBooksOption.getOutputOfListBooks());
 
     }
 
