@@ -1,16 +1,7 @@
 package com.twu.biblioteca;
-
-import com.twu.biblioteca.Library;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
-
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -26,8 +17,7 @@ public class LibraryTest {
 @Before
 public void before() throws Exception {
     library = new Library();
-    Book book = new Book("Java","John",2014);
-//    library.addBook(book);
+
 }
 
 @After
@@ -38,6 +28,7 @@ public void after() throws Exception {
     @Test
     public void shouldCheckoutBookSuccessfulIfValidBook(){
 
+        library.booksStoredInLib.add(new Book("Java","John",2014));
         assertEquals(true,library.checkedOutBookByName("Java"));
 
     }
