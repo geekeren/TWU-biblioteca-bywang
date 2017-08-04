@@ -20,14 +20,18 @@ public class BibliotecaApp {
         BibliotecaApp app =new BibliotecaApp();
 
         System.out.println(app.getWelcomeMsg());
+        app.library.addBook(new Book("PHP Basic", "WBY", 2014));
 
+        app.library.addBook(new Book("Java Web", "JonhY", 2014));
+        app.library.addBook(new Book("CPP", "Wang", 2014));
+        app.library.addBook(new Book("DSS", "WBY", 2016));
 
         Scanner s  = new Scanner(System.in);
 
         while(true){
             System.out.print(app.getOptionList());
             int option = s.nextInt();
-            if(option > 0 && option <= app.options.size()){
+            if (app.isValidOption(option)) {
                 app.options.get(option - 1).exec();
             }else{
                 System.out.println("Invalid Option");
@@ -54,4 +58,7 @@ public class BibliotecaApp {
     }
 
 
+    public boolean isValidOption(int option) {
+        return option > 0 && option <= options.size();
+    }
 }
