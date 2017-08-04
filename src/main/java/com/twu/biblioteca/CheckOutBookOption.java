@@ -15,7 +15,11 @@ public class CheckOutBookOption extends BibliotecaMenuOption {
         System.out.println("These are books you can check out,please input the number to select a book:\n");
         System.out.println(getOutputOfListStoredBooks());
         Scanner s = new Scanner(System.in);
-        library.checkedOutBookByName(s.nextLine());
+        if (library.checkedOutBookByName(s.nextLine())) {
+            System.out.println(getBookAvailableNotice());
+        } else {
+            System.out.println(getBookUnavailableNotice());
+        }
 
     }
 
