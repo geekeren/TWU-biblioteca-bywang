@@ -14,7 +14,7 @@ import static org.mockito.Mockito.mock;
 * @since <pre>Aug 3, 2017</pre> 
 * @version 1.0 
 */ 
-public class ListBooksOptionTest extends BibliotecaTest{
+public class ListBooksOptionTest{
 
     private ListBooksOption listBooksOption;
 
@@ -31,17 +31,7 @@ public void before() throws Exception {
 public void after() throws Exception { 
 } 
 
-/** 
-* 
-* Method: exec(String... word) 
-* 
-*/ 
-@Test
-public void testExec() throws Exception {
-    listBooksOption.exec();
-    //String s = new String("Hello World! Hello Java!\n");    // 注意：控制台的换行，这里用 '\n' 表示
-    assertEquals("[1]Java\n[2]Ruby\n", getConsoleOutput());
-}
+
     @Test
     public void shouldReturnListBooks() throws Exception {
 
