@@ -1,17 +1,26 @@
 package com.twu.biblioteca;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Library {
 
-    List<Book> booksStoredInLib = new ArrayList<>();
+    List<Book> booksStoredInLib = new ArrayList<>(
+            Arrays.asList(
+                    new Book("PHP Basic","WBY",2014),
+                    new Book("Java Web","JonhY",2014),
+                    new Book("CPP","Wang",2014),
+                    new Book("DSS","WBY",2016)
+            )
+    );
     List<Book> booksCheckedOut = new ArrayList<>();
 
 
     public Library() {
 
     }
+
 
 
     public boolean checkedOutBookByName(String name) {
