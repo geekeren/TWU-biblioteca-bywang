@@ -20,4 +20,8 @@ public class User {
         return password == this.password;
 
     }
+
+    public String getInfomation() {
+        return String.format("Name:\t%s\nEmail:\t%s\nPhone:\t%s\n", name, email, phone);
+    }
 }
