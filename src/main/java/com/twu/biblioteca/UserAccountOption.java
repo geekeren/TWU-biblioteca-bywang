@@ -2,7 +2,7 @@ package com.twu.biblioteca;
 
 public class UserAccountOption extends BibliotecaMenuOption {
 
-    public User logedInUser = null;
+    public static User logedInUser = null;
 
     public UserAccountOption(Library library) {
 
@@ -18,12 +18,12 @@ public class UserAccountOption extends BibliotecaMenuOption {
 
     }
 
-    public boolean getLoginStatus() {
+    public static boolean getLoginStatus() {
         return logedInUser != null;
 
     }
 
-    public String getLogedInUserInformation() {
+    public static String getLogedInUserInformation() {
         if (getLoginStatus()) {
             return logedInUser.getInfomation();
         } else {

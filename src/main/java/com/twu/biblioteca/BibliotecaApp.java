@@ -7,11 +7,12 @@ import java.util.Scanner;
 
 public class BibliotecaApp {
     private Library library = new Library();
-    List<BibliotecaMenuOption> options =new ArrayList<BibliotecaMenuOption>(
+    List<BibliotecaMenuOption> options = new ArrayList<>(
             Arrays.asList(
                     new ListBooksOption(library),
                     new CheckOutBookOption(library),
                     new ReturnBookOption(library),
+                    new UserAccountOption(library),
                     new QuitOption(library)
             )
     );
