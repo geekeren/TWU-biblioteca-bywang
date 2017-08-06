@@ -45,7 +45,8 @@ public class CheckOutBookOptionTest {
     public void shouldOutputListOfAllBooksCanbeCheckedOut() {
         library.itemsStoredInLib.add(new Book("CPP", "WBY", 2017));
         library.itemsStoredInLib.add(new Book("Swift", "WBY", 2017));
-        assertEquals("[1]CPP\n[2]Swift\n", option.getOutputOfListStoredBooks());
+        assertEquals("[1]《CPP》 Author：WBY ；Year：2017\n" +
+                "[2]《Swift》 Author：WBY ；Year：2017\n", new ListBooksOption(library).getOutputOfListBooks());
     }
 
     @Test

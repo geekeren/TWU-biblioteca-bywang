@@ -34,10 +34,13 @@ public void shouldListOptionCorrectly() throws Exception {
     assertEquals(
             "Please select an option :\n" +
                     "\t[1]: List books\n" +
-                    "\t[2]: Check out Book\n" +
-                    "\t[3]: Return book\n" +
-                    "\t[4]: User Account\n" +
-                    "\t[5]: Quit\n", app.getOptionList());
+                    "\t[2]: List movies\n" +
+                    "\t[3]: Check out Book\n" +
+                    "\t[4]: Check out movie\n" +
+                    "\t[5]: Return book\n" +
+                    "\t[6]: Return movie\n" +
+                    "\t[7]: User Account\n" +
+                    "\t[8]: Quit\n", app.getOptionList());
 //TODO: Test goes here...
 }
 
