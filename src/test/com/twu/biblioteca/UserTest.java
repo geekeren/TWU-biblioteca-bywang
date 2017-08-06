@@ -27,6 +27,9 @@ public class UserTest {
 
     @Test
     public void shouldReturnCorrectProfileOfUser() {
-        assertEquals("Name:\twangbaiyuan\nEmail:\twangbaiyuan@outlook.com\nPhone:\t13112345678\n", user.getInfomation());
+        assertEquals("User Details:\n" +
+                "Name:\twangbaiyuan\n" +
+                "Email:\twangbaiyuan@outlook.com\n" +
+                "Phone:\t13112345678\n", user.getInfomation());
     }
 }

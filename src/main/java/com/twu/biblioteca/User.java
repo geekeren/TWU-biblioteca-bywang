@@ -17,11 +17,11 @@ public class User {
     }
 
     public boolean loginWithPassword(String password) {
-        return password == this.password;
+        return password.equals(this.password);
 
     }
 
     public String getInfomation() {
-        return String.format("Name:\t%s\nEmail:\t%s\nPhone:\t%s\n", name, email, phone);
+        return String.format("User Details:\nName:\t%s\nEmail:\t%s\nPhone:\t%s\n", name, email, phone);
     }
 }
