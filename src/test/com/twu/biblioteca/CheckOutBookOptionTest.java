@@ -52,7 +52,7 @@ public class CheckOutBookOptionTest {
     public  void shouldOutputWhenNoThisBook(){
         library =  mock(Library.class);
         option = new CheckOutBookOption(library);
-        when(library.checkedOutItemByName("ff")).thenReturn(false);
+        when(library.checkedOutItemWithUserByName("ff", "")).thenReturn(false);
         assertEquals("That book is not available",option.getBookUnavailableNotice());
     }
 
@@ -61,7 +61,7 @@ public class CheckOutBookOptionTest {
     public  void shouldOutputWhenHaveThisBook(){
         library =  mock(Library.class);
         option = new CheckOutBookOption(library);
-        when(library.checkedOutItemByName("ff")).thenReturn(true);
+        when(library.checkedOutItemWithUserByName("ff", "")).thenReturn(true);
         assertEquals("Thank you! Enjoy the book",option.getBookAvailableNotice());
     }
 } 

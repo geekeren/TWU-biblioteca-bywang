@@ -36,7 +36,8 @@ public void shouldListOptionCorrectly() throws Exception {
                     "\t[1]: List books\n" +
                     "\t[2]: Check out Book\n" +
                     "\t[3]: Return book\n" +
-                    "\t[4]: Quit\n",app.getOptionList());
+                    "\t[4]: User Account\n" +
+                    "\t[5]: Quit\n", app.getOptionList());
 //TODO: Test goes here...
 }
 

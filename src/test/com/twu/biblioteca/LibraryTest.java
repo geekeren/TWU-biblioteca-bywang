@@ -31,14 +31,14 @@ public class LibraryTest {
     public void shouldCheckoutBookSuccessfulIfValidBook() {
 
         library.itemsStoredInLib.add(new Book("Java", "John", 2014));
-        assertEquals(true, library.checkedOutItemByName("Java"));
+        assertEquals(true, library.checkedOutItemWithUserByName("Java", ""));
 
     }
 
     @Test
     public void shouldCheckoutBookFailedIfNoThisBook() {
 
-        assertEquals(false, library.checkedOutItemByName("Ruby"));
+        assertEquals(false, library.checkedOutItemWithUserByName("Ruby", ""));
     }
 
     @Test

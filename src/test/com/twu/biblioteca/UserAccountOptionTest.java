@@ -17,7 +17,7 @@ public class UserAccountOptionTest {
 
     @Test
     public void shouldReturnFalseLoginStatusWhenNotLogin() {
-
+        option.logedInUser = null;
         assertEquals(false, option.getLoginStatus());
     }
 
