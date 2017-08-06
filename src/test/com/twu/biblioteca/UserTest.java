@@ -10,7 +10,7 @@ public class UserTest {
 
     @Before
     public void before() {
-        user = new User(name, email, phone);
+        user = new User("wangbaiyuan", "wangbaiyuan@outlook.com", "13112345678");
         user.bindLibAccuntProfile("188-1234", "password");//Bind user's lib number and password
     }
 
@@ -22,6 +22,6 @@ public class UserTest {
 
     @Test
     public void shouldLoginSuccessfulWhenInputIncorrectPassword() {
-        assertEquals(fale, user.loginWithPassword("passwor"));
+        assertEquals(false, user.loginWithPassword("passwor"));
     }
 }
