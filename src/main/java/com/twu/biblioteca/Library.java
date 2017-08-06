@@ -1,13 +1,12 @@
 package com.twu.biblioteca;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Library {
 
-    List<Book> booksStoredInLib = new ArrayList<>();
-    List<Book> booksCheckedOut = new ArrayList<>();
+    List<LibItem> itemsStoredInLib = new ArrayList<>();
+    List<LibItem> itemsCheckedOut = new ArrayList<>();
 
 
     public Library() {
@@ -15,25 +14,24 @@ public class Library {
     }
 
 
+    public boolean checkedOutItemByName(String name) {
 
-    public boolean checkedOutBookByName(String name) {
-
-        for (int i = 0; i < booksStoredInLib.size(); i++) {
-            if (booksStoredInLib.get(i).name.equals(name)) {
-                booksCheckedOut.add(booksStoredInLib.get(i));
-                booksStoredInLib.remove(i);
+        for (int i = 0; i < itemsStoredInLib.size(); i++) {
+            if (itemsStoredInLib.get(i).getName().equals(name)) {
+                itemsCheckedOut.add(itemsStoredInLib.get(i));
+                itemsStoredInLib.remove(i);
                 return true;
             }
         }
         return false;
     }
 
-    public void returnBookByName(String name) {
+    public void returnItemByName(String name) {
 
-        for (int i = 0; i < booksCheckedOut.size(); i++) {
-            if (booksCheckedOut.get(i).name.equals(name)) {
-                booksStoredInLib.add(booksCheckedOut.get(i));
-                booksCheckedOut.remove(i);
+        for (int i = 0; i < itemsCheckedOut.size(); i++) {
+            if (itemsCheckedOut.get(i).getName().equals(name)) {
+                itemsStoredInLib.add(itemsCheckedOut.get(i));
+                itemsCheckedOut.remove(i);
 
             }
 
@@ -41,6 +39,6 @@ public class Library {
     }
 
     public void addBook(Book book) {
-        booksStoredInLib.add(book);
+        itemsStoredInLib.add(book);
     }
 }

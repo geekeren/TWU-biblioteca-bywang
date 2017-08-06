@@ -6,4 +6,6 @@ public abstract class LibItem {
 
     public abstract String getDetails();
 
+    public abstract String getName();
+
 }

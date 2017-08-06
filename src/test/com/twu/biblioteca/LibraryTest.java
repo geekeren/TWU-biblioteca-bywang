@@ -1,6 +1,5 @@
 package com.twu.biblioteca;
 
-import com.sun.org.apache.xml.internal.resolver.readers.ExtendedXMLCatalogReader;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
@@ -31,25 +30,25 @@ public class LibraryTest {
     @Test
     public void shouldCheckoutBookSuccessfulIfValidBook() {
 
-        library.booksStoredInLib.add(new Book("Java", "John", 2014));
-        assertEquals(true, library.checkedOutBookByName("Java"));
+        library.itemsStoredInLib.add(new Book("Java", "John", 2014));
+        assertEquals(true, library.checkedOutItemByName("Java"));
 
     }
 
     @Test
     public void shouldCheckoutBookFailedIfNoThisBook() {
 
-        assertEquals(false, library.checkedOutBookByName("Ruby"));
+        assertEquals(false, library.checkedOutItemByName("Ruby"));
     }
 
     @Test
     public void shouldBookAppearInLibAfterReturn() {
-        library.booksCheckedOut.add(new Book("Ruby", "John", 2014));
-        library.returnBookByName("Ruby");
+        library.itemsCheckedOut.add(new Book("Ruby", "John", 2014));
+        library.returnItemByName("Ruby");
 
         boolean isBookAppearInLib = false;
-        for (Book book : library.booksStoredInLib) {
-            if (book.name.equals("Ruby"))
+        for (LibItem item : library.itemsStoredInLib) {
+            if (item instanceof Book && item.getName().equals("Ruby"))
                 isBookAppearInLib = true;
         }
 
@@ -59,7 +58,7 @@ public class LibraryTest {
     @Test
     public void testAddBook() throws Exception {
         library.addBook(new Book("PHP Basic", "WBY", 2014));
-        assertEquals(1, library.booksStoredInLib.size());
+        assertEquals(1, library.itemsStoredInLib.size());
     }
 
 

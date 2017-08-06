@@ -3,7 +3,6 @@ package com.twu.biblioteca;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
-import org.mockito.Mock;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
@@ -44,8 +43,8 @@ public class CheckOutBookOptionTest {
 
     @Test
     public void shouldOutputListOfAllBooksCanbeCheckedOut() {
-        library.booksStoredInLib.add(new Book("CPP", "WBY", 2017));
-        library.booksStoredInLib.add(new Book("Swift", "WBY", 2017));
+        library.itemsStoredInLib.add(new Book("CPP", "WBY", 2017));
+        library.itemsStoredInLib.add(new Book("Swift", "WBY", 2017));
         assertEquals("[1]CPP\n[2]Swift\n", option.getOutputOfListStoredBooks());
     }
 
@@ -53,7 +52,7 @@ public class CheckOutBookOptionTest {
     public  void shouldOutputWhenNoThisBook(){
         library =  mock(Library.class);
         option = new CheckOutBookOption(library);
-        when(library.checkedOutBookByName("ff")).thenReturn(false);
+        when(library.checkedOutItemByName("ff")).thenReturn(false);
         assertEquals("That book is not available",option.getBookUnavailableNotice());
     }
 
@@ -62,7 +61,7 @@ public class CheckOutBookOptionTest {
     public  void shouldOutputWhenHaveThisBook(){
         library =  mock(Library.class);
         option = new CheckOutBookOption(library);
-        when(library.checkedOutBookByName("ff")).thenReturn(true);
+        when(library.checkedOutItemByName("ff")).thenReturn(true);
         assertEquals("Thank you! Enjoy the book",option.getBookAvailableNotice());
     }
 } 

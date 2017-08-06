@@ -1,6 +1,6 @@
 package com.twu.biblioteca;
 
-public class Book {
+public class Book extends LibItem {
     public String name;
     public String author;
     public int yearPublished;
@@ -11,8 +11,14 @@ public class Book {
         this.yearPublished = yearPublished;
     }
 
+    @Override
     public String getDetails() {
         return String.format("《%s》 Author：%s ；Year：%d", name, author, yearPublished);
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 
 }

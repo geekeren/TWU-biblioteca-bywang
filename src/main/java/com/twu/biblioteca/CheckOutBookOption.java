@@ -15,7 +15,7 @@ public class CheckOutBookOption extends BibliotecaMenuOption {
         System.out.println("These are books you can check out,please input the number to select a book:\n");
         System.out.println(getOutputOfListStoredBooks());
         Scanner s = new Scanner(System.in);
-        if (library.checkedOutBookByName(s.nextLine())) {
+        if (library.checkedOutItemByName(s.nextLine())) {
             System.out.println(getBookAvailableNotice());
         } else {
             System.out.println(getBookUnavailableNotice());
@@ -25,9 +25,13 @@ public class CheckOutBookOption extends BibliotecaMenuOption {
 
     public String getOutputOfListStoredBooks() {
         StringBuffer sb = new StringBuffer("");
-        for (int i = 1; i <= library.booksStoredInLib.size(); i++) {
-            Book book = library.booksStoredInLib.get(i - 1);
-            sb.append("[" + i + "]" + book.name + "\n");
+        for (int i = 1; i <= library.itemsStoredInLib.size(); i++) {
+            LibItem item = library.itemsStoredInLib.get(i - 1);
+            if (item instanceof Book) {
+                Book book = (Book) item;
+                sb.append("[" + i + "]" + book.name + "\n");
+
+            }
         }
         return sb.toString();
     }

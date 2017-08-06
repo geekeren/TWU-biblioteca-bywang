@@ -15,8 +15,8 @@ public class ListBooksOption extends BibliotecaMenuOption {
 
     public String getOutputOfListBooks() {
         StringBuffer sb = new StringBuffer("");
-        for(int i=1;i<=library.booksStoredInLib.size();i++){
-            Book book = library.booksStoredInLib.get(i-1);
+        for (int i = 1; i <= library.itemsStoredInLib.size(); i++) {
+            Book book = (Book) library.itemsStoredInLib.get(i - 1);
             sb.append("[" + i + "]" + book.getDetails() + "\n");
         }
         return sb.toString();
