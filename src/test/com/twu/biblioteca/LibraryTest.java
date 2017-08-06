@@ -58,15 +58,15 @@ public class LibraryTest {
     @Test
     public void shouldReturnUserIfValidLibNo() {
         User user = new User("John", "1234@qq.com", "1235678");
-        library.users.add(new User("John", "1234@qq.com", "1235678"));
-        assertEquals(user, library.getUserByLibNO("John"));
+        library.users.add(user);
+        user.bindLibAccuntProfile("123-4569", "");
+        assertEquals(user, library.getUserByLibNO("123-4569"));
     }
 
     @Test
     public void shouldReturnNullIfInValidLibNo() {
-        User user = new User("bhh", "1234@qq.com", "1235678");
-        library.users.add(new User("John", "1234@qq.com", "1235678"));
-        assertEquals(null, library.getUserByLibNO("John"));
+
+        assertEquals(null, library.getUserByLibNO("123-4345"));
     }
 
     @Test

@@ -59,6 +59,15 @@ public class Library {
         itemsStoredInLib.add(book);
     }
 
+    public User getUserByLibNO(String libno) {
+        for (User user : users) {
+            if (user.libnumber != null && user.libnumber.equals(libno))
+                return user;
+        }
+        return null;
+
+    }
+
     public class CheckoutItem {
         public CheckoutItem(String itemName, String userLibNO) {
             this.itemName = itemName;
