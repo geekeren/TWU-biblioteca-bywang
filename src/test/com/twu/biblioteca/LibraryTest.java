@@ -56,6 +56,13 @@ public class LibraryTest {
     }
 
     @Test
+    public void shouldReturnUserIfValidLibNo() {
+        User user = new User("John", "1234@qq.com", "1235678");
+        library.users.add(new User("John", "1234@qq.com", "1235678"));
+        assertEquals(user, library.getUserByLibNO("John"));
+    }
+
+    @Test
     public void testAddBook() throws Exception {
         library.addBook(new Book("PHP Basic", "WBY", 2014));
         assertEquals(1, library.itemsStoredInLib.size());
