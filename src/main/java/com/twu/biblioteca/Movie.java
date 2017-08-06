@@ -2,7 +2,7 @@ package com.twu.biblioteca;
 
 public class Movie extends LibItem {
     public String director;
-    public int rate;
+    public int rate = 5;
 
     public Movie(String name, String director, int year) {
         this.name = name;

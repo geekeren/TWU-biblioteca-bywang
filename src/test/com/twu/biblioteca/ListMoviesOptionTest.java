@@ -34,8 +34,8 @@ public class ListMoviesOptionTest {
     @Test
     public void shouldReturnListMovies() throws Exception {
 
-        assertEquals("[1]《Java》 Author：Hbj ；Year：2011\n" +
-                "[2]《Ruby》 Author：Hf ；Year：2011\n", listMoviesOption.getOutputOfListMovies());
+        assertEquals("[1]《战狼2》-Director：WuJing ；Year：2017;Rate: 5\n" +
+                "[2]《三生三世》-Director：XXX ；Year：2011;Rate: 5\n", listMoviesOption.getOutputOfListMovies());
 
     }
 
